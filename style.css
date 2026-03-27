@@ -28,24 +28,27 @@ body {
 
 /* ===== Custom Cursor ===== */
 .cursor {
-  width: 12px; height: 12px;
-  background: var(--c1);
+  width: 14px; height: 14px;
+  background: #ff8c42;
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 99999;
   transition: transform 0.15s ease;
-  mix-blend-mode: difference;
+  box-shadow: 0 0 10px rgba(255,140,66,0.8), 0 0 20px rgba(255,140,66,0.4);
+  display: block;
 }
 .cursor-follower {
-  width: 36px; height: 36px;
-  border: 1.5px solid var(--c1);
+  width: 40px; height: 40px;
+  border: 2px solid #ff8c42;
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
-  z-index: 9998;
+  z-index: 99998;
   transition: all 0.25s ease;
-  mix-blend-mode: difference;
+  display: block;
+  background: rgba(255,140,66,0.05);
+  box-shadow: 0 0 15px rgba(255,140,66,0.2);
 }
 
 /* Noise texture overlay */
@@ -419,15 +422,14 @@ nav {
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  filter: saturate(1.1);
-  mix-blend-mode: luminosity;
-  opacity: 0.8;
+  filter: saturate(1.1) brightness(1.15) contrast(1.05);
+  opacity: 1;
 }
 .about-photo-card::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 40%, rgba(12,12,14,0.8));
+  background: linear-gradient(to bottom, transparent 70%, rgba(5,13,26,0.4));
 }
 .photo-tag {
   position: absolute;
